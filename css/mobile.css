@@ -1,0 +1,24 @@
+.tabel{
+    font-size: 7pt;
+}
+
+.headerpdf{
+    font-size: 7pt;
+}
+
+.imgloader{
+    width: 1px;
+}
+
+/* UNTUK TAMILAN DESKTOP */
+@media (min-width: 992px) {
+    .tabel{
+        font-size: 10pt;
+    }
+    .headerpdf{
+        font-size: 9pt;
+    }
+    .imgloader{
+        width: 5px;
+    }
+}
