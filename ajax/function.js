@@ -303,9 +303,11 @@ function load_masterproduk()
             $(".loader").show();
         },
         success:function(data){
+            $('#produkModal').modal('hide');
             $('#content').html(data);
         },
         complete: function(){
+            $('#produkModal').modal('hide');
             $(".loader").hide();
         }
     });
@@ -318,19 +320,22 @@ function load_proses_addproduk(namaproduk)
         method:"POST",
         data:{namaproduk:namaproduk},
         beforeSend: function(){
+            $('#produkModal').modal('hide');
             $(".loader").show();
         },
         success:function(response){
             var stat = $.parseJSON(response);
             var statt = stat.status; 
             if(statt == '1'){
+                $('#produkModal').modal('hide');
                 load_masterproduk();
-                Swal.fire({
-                    title: 'Add Success!',
-                    icon: 'success',
-                    confirmButtonText: 'Close'
-                });   
+                // Swal.fire({
+                //     title: 'Add Success!',
+                //     icon: 'success',
+                //     confirmButtonText: 'Close'
+                // });   
             } else{
+                $('#produkModal').modal('hide');
                 Swal.fire({
                     title: 'Add Failed!',
                     icon: 'error',
@@ -346,6 +351,7 @@ function load_proses_addproduk(namaproduk)
             });
         },
         complete: function(){
+         $('#produkModal').modal('hide');
          $(".loader").hide();
         }
     });

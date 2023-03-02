@@ -98,8 +98,10 @@ $(document).on('click', '.masteruser', function(){
 $(document).on('click', '.masterproduk', function(){
     load_masterproduk();
 });
+
 $(document).on('click', '.addproduk', function(){
     var namaproduk = document.getElementById("namaproduk").value;
+    $('#produkModal').modal('hide');
     load_proses_addproduk(namaproduk);
 });
 
@@ -593,10 +595,10 @@ $(document).on('click', '.uploadskrb', function(){
     }
 });
 
-$(document).on('click', '.form_edit_produk', function(){
-    var idproduk = $(this).attr('attr-idproduk');
-    load_formeditproduk(idproduk);
-});
+// $(document).on('click', '.form_edit_produk', function(){
+//     var idproduk = $(this).attr('attr-idproduk');
+//     load_formeditproduk(idproduk);
+// });
 
 $(document).on('click', '.form_edit_class', function(){
     var idclass = $(this).attr('attr-idclass');
