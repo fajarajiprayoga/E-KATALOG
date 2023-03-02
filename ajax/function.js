@@ -658,6 +658,78 @@ function load_formeditskrb(idchasis, dept, produk, clas, model, chasis, type, id
     });
 }
 
+function load_formeditproduk(idproduk)
+{
+    $.ajax({
+        url:"index.php?r=masterproduk/form_editproduk",
+        method:"POST",
+        data:{idproduk:idproduk},
+        beforeSend: function(){
+            $(".loader").show();
+        },
+        success:function(data){
+            $('#content').html(data);
+        },
+        complete: function(){
+            $(".loader").hide();
+        }
+    });
+}
+
+function load_formeditclass(idproduk, idclass)
+{
+    $.ajax({
+        url:"index.php?r=masterclass/form_editclass",
+        method:"POST",
+        data:{idproduk: idproduk, idclass: idclass},
+        beforeSend: function(){
+            $(".loader").show();
+        },
+        success:function(data){
+            $('#content').html(data);
+        },
+        complete: function(){
+            $(".loader").hide();
+        }
+    });
+}
+
+function load_formeditmodel(idproduk, idclass, idmodel)
+{
+    $.ajax({
+        url:"index.php?r=mastermodel/form_editmodel",
+        method:"POST",
+        data:{idproduk: idproduk, idclass: idclass, idmodel},
+        beforeSend: function(){
+            $(".loader").show();
+        },
+        success:function(data){
+            $('#content').html(data);
+        },
+        complete: function(){
+            $(".loader").hide();
+        }
+    });
+}
+
+function load_formedittype(idproduk, idclass, idmodel, idtype)
+{
+    $.ajax({
+        url:"index.php?r=mastertype/form_edittype",
+        method:"POST",
+        data:{idproduk: idproduk, idclass: idclass, idmodel: idmodel, idtype: idtype},
+        beforeSend: function(){
+            $(".loader").show();
+        },
+        success:function(data){
+            $('#content').html(data);
+        },
+        complete: function(){
+            $(".loader").hide();
+        }
+    });
+}
+
 function load_drawing(idchasis, produk, clas, model, chasis, type)
 {
     $.ajax({

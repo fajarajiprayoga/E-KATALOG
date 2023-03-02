@@ -75,7 +75,7 @@
                             ?>
                             </td>
                             <td>
-                                <i class="fas fa-trash-alt deletemasterclass" attr-idclass="<?php echo $arr[]=$rowclass["ID_CLASS"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
+                                <i class="fas fa-trash-alt deletemasterclassdata" attr-idclass="<?php echo $arr[]=$rowclass["ID_CLASS"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
                                 <i class="fas fa-edit form_edit_class" attr-idclass="<?php echo $arr[]=$rowclass["ID_CLASS"]; ?>" attr-idproduk="<?php echo $idproduk; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                             </td>
                           </tr>
@@ -90,4 +90,51 @@
 </section>
 <script>
 $('#myTable').DataTable();
+
+// $(document).ready(function() {
+//     $('.deletemasterclassdata').on('click', function() {
+//         var idclass = $(this).attr('attr-idclass');
+
+//         Swal.fire({
+//             title: 'Anda yakin akan delete class ini?',
+//             icon: 'warning',
+//             showCancelButton: true,
+//             confirmButtonColor: '#3085d6',
+//             cancelButtonColor: '#d33',
+//             confirmButtonText: 'Ya, Delete CLASS ini!'
+//         }).then((result) => {
+//             if (result.isConfirmed) {
+//                 $.ajax({
+//                     url:"index.php?r=masterclass/proses_deleteclass",
+//                     method: "POST",
+//                     data: {idclass: idclass},
+//                     beforeSend: function(){
+//                         $(".loader").show();
+//                     },
+//                     success: function(data){
+//                         var stat = $.parseJSON(data);
+//                         var statt = stat.status;
+//                         if(statt == "1"){
+//                             load_masterclass();
+//                             Swal.fire({
+//                             title: 'Delete Success!',
+//                             icon: 'success',
+//                             confirmButtonText: 'Close'
+//                         });
+//                         } else {
+//                             Swal.fire({
+//                             title: 'Delete Failed!',
+//                             icon: 'error',
+//                             confirmButtonText: 'Close'
+//                         });
+//                         }
+//                     },
+//                     complete: function(){
+//                         $(".loader").hide();
+//                     }
+//                 })
+//             }
+//         })
+//     })
+// })
 </script>

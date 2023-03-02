@@ -8,12 +8,14 @@ if($row == 0){} else {
     <div class="row">
         <a class="btn btn-primary skrb" style="color: white;" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>">Back</a>
         <div>
+        <?php if(!Yii::app()->user->isSales()) { ?>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-sort"></i> Add
             </a>
+        <?php } ?>
         </div>
     </div>
-    
+    <?php if(!Yii::app()->user->isSales()) { ?>
     <div class="collapse py-2" id="collapseAdd">
         <div class="card-header">
             <h6 class="text-uppercase mb-0">Add Skrb</h6>
@@ -55,6 +57,7 @@ if($row == 0){} else {
             </div>
       </div>
     </div>
+    <?php } ?>
 </section>
 <section class="py-2">
 <div class="col-lg-12 py-2">
@@ -147,8 +150,10 @@ if($row == 0){} else {
                                                 <tr>
                                                     <th><?php echo $arr[]=$rowskrb['FILE_VERSION']; ?></th>
                                                     <th><?php echo $arr[]=$rowskrb['FILE_DESKRIPSI']; ?></th>
+                                                    <?php if(!Yii::app()->user->isSales()) { ?>
                                                     <th><i class="fas fa-edit formeditskrb" attr-dept="<?php echo $dept; ?>" attr-idskrbsales="<?php echo $idskrbsales; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i></th>
                                                     <th><i class="fas fa-trash-alt deleteskrb" attr-dept="<?php echo $dept; ?>" attr-idskrbsales="<?php echo $idskrbsales; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i></th>
+                                                    <?php } ?>
                                                     <th><a href="FILE/SKRB/<?php echo $dir; ?>/<?php echo $data['filename']; ?>" target="_blank" download><i class="fas fa-download"></i></a></th>
                                                 </tr>
                                             </table>
@@ -166,8 +171,10 @@ if($row == 0){} else {
                                                 <tr>
                                                     <th><?php echo $arr[]=$rowskrb['FILE_VERSION']; ?></th>
                                                     <th><?php echo $arr[]=$rowskrb['FILE_DESKRIPSI']; ?></th>
+                                                    <?php if(!Yii::app()->user->isSales()) { ?>
                                                     <th><i class="fas fa-edit formeditskrb" attr-idskrbsales="<?php echo $idskrbsales; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i></th>
                                                     <th><i class="fas fa-trash-alt deleteskrb" attr-source="<?php echo $arr[]=$rowskrb['FILE_NAME']; ?>" attr-dept="<?php echo $dept; ?>" attr-idskrbsales="<?php echo $idskrbsales; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i></th>
+                                                    <?php } ?>
                                                     <th><i class="fas fa-download downloadskrb" attr-filename="<?php echo $filename; ?>" attr-departemen="<?php echo $dept; ?>" style="font-size: 13pt; cursor: pointer;"></i></th>
                                                 </tr>
                                             </table>

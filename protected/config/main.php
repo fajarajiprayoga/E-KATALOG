@@ -43,10 +43,16 @@ return array(
             'db'=>require(dirname(__FILE__).'/database.php'),
             'dbOracle'=>array(
                     'class'=>'ext.oci8Pdo.OciDbConnection',
-                    'connectionString' => 'oci:dbname=//192.168.9.92:1521/xe',
-                    //'connectionString' => 'oci:dbname=(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.9.92)(PORT = 1521)))(CONNECT_DATA=(SID=xe)))',
-                    'username' => 'C##MKTAPPS',
-                    'password' => 'madajaya',
+					//DB Server
+                    // 'connectionString' => 'oci:dbname=//192.168.9.92:1521/xe',
+                    // //'connectionString' => 'oci:dbname=(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.9.92)(PORT = 1521)))(CONNECT_DATA=(SID=xe)))',
+                    // 'username' => 'C##MKTAPPS',
+                    // 'password' => 'madajaya',
+
+					//DB Local
+					'connectionString' => 'oci:dbname=//localhost:1521/xe',
+					'username' => 'DBMAJ_LOCAL',
+                    'password' => 'PASSWORD',
                 'charset' => 'utf8',
                 'schemaCachingDuration' => '3600',
                 'enableParamLogging' => true,

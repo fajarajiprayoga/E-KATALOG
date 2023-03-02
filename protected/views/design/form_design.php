@@ -8,12 +8,14 @@ if($row == 0){} else {
     <div class="row">
         <a class="btn btn-primary design" style="color: white;" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>">Back</a>
         <div>
+        <?php if(!Yii::app()->user->isSales()) { ?>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-sort"></i> Add
             </a>
+        <?php } ?>
         </div>
     </div>
-    
+    <?php if(!Yii::app()->user->isSales()) { ?>
     <div class="collapse py-2" id="collapseAdd">
         <div class="card-header">
             <h6 class="text-uppercase mb-0">Add Design</h6>
@@ -55,6 +57,7 @@ if($row == 0){} else {
             </div>
       </div>
     </div>
+    <?php } ?>
 </section>
 <section class="py-2">
 <div class="col-lg-12 py-2">
@@ -148,8 +151,11 @@ if($row == 0){} else {
                                         <td><?php echo $arr[]=$rowdesign['FILE_VERSION']; ?></td>
                                         <td><?php echo $arr[]=$rowdesign['CREATE_AT']; ?></td>
                                         <td>
+                                        <?php if(!Yii::app()->user->isSales()) { ?>
                                             <i class="fas fa-edit formeditdesign" attr-dept="<?php echo $dept; ?>" attr-iddesign="<?php echo $iddesign; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                                             <i class="fas fa-trash-alt deletedesign" attr-dept="<?php echo $dept; ?>" attr-iddesign="<?php echo $iddesign; ?>" attr-dept="<?php echo $dept; ?>" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $produk; ?>" attr-class = "<?php echo $clas; ?>" attr-model = "<?php echo $model; ?>" attr-chasis = "<?php echo $chasis; ?>" attr-type = "<?php echo $type; ?>" style="font-size: 13pt; cursor: pointer;"></i>
+                                        <?php  } ?>                           
+                                            <a href="FILE/DESIGN/<?php echo $arr[]=$rowdesign['FILE_NAME']; ?>" target="_blank" view><i class="fas fa-eye"></i></a>                 
                                             <a href="FILE/DESIGN/<?php echo $arr[]=$rowdesign['FILE_NAME']; ?>" target="_blank" download><i class="fas fa-download"></i></a>
                                         </td>
                                     </tr>

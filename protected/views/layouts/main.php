@@ -53,39 +53,25 @@
         <?php if(/*$this->cekotp()*/ '1' == '1'){ ?>
         <div class="d-flex align-items-stretch">
             <div id="sidebar" class="sidebar py-3">
-              <?php if(Yii::app()->user->isAdm()){ ?>
+              <?php if(Yii::app()->user->isAdm() || Yii::app()->user->isEng() || Yii::app()->user->isAll()){ ?>
               <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
               <ul class="sidebar-menu list-unstyled">
-                    <li class="sidebar-list-item"><a href="index.php?r=home" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
-                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterproduk"><i class="o-database-1 mr-3 text-gray"></i><span>Master Produk</span></a></li>
-                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterclass"><i class="o-survey-1 mr-3 text-gray"></i><span>Master Class</span></a></li>
-                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted mastermodel"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Master Model</span></a></li>
-                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted mastertype"><i class="o-app-layout-1 mr-3 text-gray"></i><span>Master Type</span></a></li>
-                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterchasis"><i class="o-code-window-1 mr-3 text-gray"></i><span>Master Chasis</span></a></li>
-                    <li class="sidebar-list-item"><a href="index.php?r=site/logout" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
-              </ul>
-              <?php } else if(Yii::app()->user->isEng()){ ?>
-              <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
-              <ul class="sidebar-menu list-unstyled">
-                    <li class="sidebar-list-item"><a href="index.php?r=home" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
-                    <li class="sidebar-list-item"><a href="index.php?r=masteruser" class="sidebar-link text-muted"><i class="o-contact-card-1 mr-3 text-gray"></i><span>Master User</span></a></li>
+                    <li id="navhome" class="sidebar-list-item"><a href="index.php" class="sidebar-link text-muted dashboard"><i class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
+                    <li id="navmasterproduk" class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterproduk"><i class="o-database-1 mr-3 text-gray"></i><span>Master Produk</span></a></li>
+                    <li id="navmasterclass" class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterclass"><i class="o-survey-1 mr-3 text-gray"></i><span>Master Class</span></a></li>
+                    <li id="navmastermodel" class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted mastermodel"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Master Model</span></a></li>
+                    <li id="navmastertype" class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted mastertype"><i class="o-app-layout-1 mr-3 text-gray"></i><span>Master Type</span></a></li>
+                    <li id="navmasterchasis" class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterchasis"><i class="o-code-window-1 mr-3 text-gray"></i><span>Master Chasis</span></a></li>
                     <li class="sidebar-list-item"><a href="index.php?r=site/logout" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
               </ul>
               <?php } else if(Yii::app()->user->isSales()){ ?>
               <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
               <ul class="sidebar-menu list-unstyled">
                     <li class="sidebar-list-item"><a href="index.php?r=home" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
-                    <li class="sidebar-list-item"><a href="index.php?r=masteruser" class="sidebar-link text-muted"><i class="o-contact-card-1 mr-3 text-gray"></i><span>Master User</span></a></li>
+                    <li class="sidebar-list-item"><a style="cursor: pointer;" class="sidebar-link text-muted masterchasis"><i class="o-code-window-1 mr-3 text-gray"></i><span>Master Chasis</span></a></li>
                     <li class="sidebar-list-item"><a href="index.php?r=site/logout" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
               </ul>
-              <?php } else if(Yii::app()->user->isAll()){ ?>
-              <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
-              <ul class="sidebar-menu list-unstyled">
-                    <li class="sidebar-list-item"><a href="index.php?r=home" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Dashboard</span></a></li>
-                    <li class="sidebar-list-item"><a href="index.php?r=masteruser" class="sidebar-link text-muted"><i class="o-contact-card-1 mr-3 text-gray"></i><span>Master User</span></a></li>
-                    <li class="sidebar-list-item"><a href="index.php?r=site/logout" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
-              </ul>
-              <?php }else{} ?>
+              <?php }?>
             </div>
             <div class="page-holder w-100 d-flex flex-wrap">
                 
@@ -118,6 +104,7 @@
         <script>
         $(document).ready(function(){
             load_beranda();
+            $('.dashboard').addClass('active');
         });
         </script>
         

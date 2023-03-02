@@ -1,4 +1,52 @@
 /////////////////// ON CLICK ///////////////////
+$(document).on('click', '#navhome', function() {
+    $('.dashboard').addClass('active');
+    $('.masterproduk').removeClass('active');
+    $('.masterclass').removeClass('active');
+    $('.mastermodel').removeClass('active');
+    $('.mastertype').removeClass('active');
+    $('.masterchasis').removeClass('active');
+});
+$(document).on('click', '#navmasterproduk', function() {
+    $('.dashboard').removeClass('active');
+    $('.masterproduk').addClass('active');
+    $('.masterclass').removeClass('active');
+    $('.mastermodel').removeClass('active');
+    $('.mastertype').removeClass('active');
+    $('.masterchasis').removeClass('active');
+});
+$(document).on('click', '#navmasterclass', function() {
+    $('.dashboard').removeClass('active');
+    $('.masterproduk').removeClass('active');
+    $('.masterclass').addClass('active');
+    $('.mastermodel').removeClass('active');
+    $('.mastertype').removeClass('active');
+    $('.masterchasis').removeClass('active');
+});
+$(document).on('click', '#navmastermodel', function() {
+    $('.dashboard').removeClass('active');
+    $('.masterproduk').removeClass('active');
+    $('.masterclass').removeClass('active');
+    $('.mastermodel').addClass('active');
+    $('.mastertype').removeClass('active');
+    $('.masterchasis').removeClass('active');
+});
+$(document).on('click', '#navmastertype', function() {
+    $('.dashboard').removeClass('active');
+    $('.masterproduk').removeClass('active');
+    $('.masterclass').removeClass('active');
+    $('.mastermodel').removeClass('active');
+    $('.mastertype').addClass('active');
+    $('.masterchasis').removeClass('active');
+});
+$(document).on('click', '#navmasterchasis', function() {
+    $('.dashboard').removeClass('active');
+    $('.masterproduk').removeClass('active');
+    $('.masterclass').removeClass('active');
+    $('.mastermodel').removeClass('active');
+    $('.mastertype').removeClass('active');
+    $('.masterchasis').addClass('active');
+});
 $(document).on('click', '.first', function(){
     load_beranda();
 });
@@ -543,6 +591,35 @@ $(document).on('click', '.uploadskrb', function(){
             }
         });
     }
+});
+
+$(document).on('click', '.form_edit_produk', function(){
+    var idproduk = $(this).attr('attr-idproduk');
+    load_formeditproduk(idproduk);
+});
+
+$(document).on('click', '.form_edit_class', function(){
+    var idclass = $(this).attr('attr-idclass');
+    var idproduk = $(this).attr('attr-idproduk');
+    
+    load_formeditclass(idproduk, idclass);
+});
+
+$(document).on('click', '.form_edit_model', function(){
+    var idclass = $(this).attr('attr-idclass');
+    var idproduk = $(this).attr('attr-idproduk');
+    var idmodel = $(this).attr('attr-idmodel');
+    
+    load_formeditmodel(idproduk, idclass, idmodel);
+});
+
+$(document).on('click', '.form_edit_type', function(){
+    var idclass = $(this).attr('attr-idclass');
+    var idproduk = $(this).attr('attr-idproduk');
+    var idmodel = $(this).attr('attr-idmodel');
+    var idtype = $(this).attr('attr-idtype');
+    
+    load_formedittype(idproduk, idclass, idmodel, idtype);
 });
 
 $(document).on('click', '.formeditskrb', function(){
@@ -1300,6 +1377,50 @@ $(document).on('click', '.iws', function(){
     load_iws(idchasis, produk, clas, model, chasis, type);
 });
 
+$(document).on('click', '.deletemasterproduk', function(){
+    Swal.fire({
+        title: 'Anda yakin akan delete produk ini?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Delete PRODUK ini!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            var idproduk = $(this).attr('attr-idproduk');
+            $.ajax({
+                url:"index.php?r=masterproduk/proses_delproduk",
+                method:"POST",
+                data:{idproduk: idproduk},
+                beforeSend: function(){
+                    $(".loader").show();
+                },
+                success:function(data){
+                    var stat = $.parseJSON(data);
+                    var statt = stat.status;
+                    if(statt == "1"){
+                        load_masterproduk();
+                        Swal.fire({
+                            title: 'Delete Success!',
+                            icon: 'success',
+                            confirmButtonText: 'Close'
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Delete Failed!',
+                            icon: 'error',
+                            confirmButtonText: 'Close'
+                        });
+                    }
+                },
+                complete: function(){
+                    $(".loader").hide();
+                }
+            });
+        }
+        });
+});
+
 $(document).on('click', '.deletemasterchasis', function(){
     Swal.fire({
         title: 'Anda yakin akan delete chasis ini?',
@@ -1415,4 +1536,356 @@ $(document).on('click', '.updatemasterchasis', function(){
         });
     } 
 });
+
+$(document).on('click', '.updatemasterproduk', function(){
+    var idproduk = $('#idproduk').val();
+    var namaproduk = $('#namaproduk').val();
+    
+    if(namaproduk == ""){
+        Swal.fire({
+            title: 'Warning!',
+            text: 'Nama Produk Tidak Boleh Kosong!',
+            icon: 'warning',
+            confirmButtonText: 'Close'
+        });
+    } else {
+        let formData = new FormData();
+        formData.append('idproduk', idproduk);
+        formData.append('namaproduk', namaproduk);
+        
+        $.ajax({
+            url:"index.php?r=masterproduk/proses_editproduk",
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            beforeSend: function(){
+                $(".loader").show();
+            },
+            success:function(data){
+                var stat = $.parseJSON(data);
+                var statt = stat.status;
+                if(statt == "1"){
+                    load_masterproduk();
+                    Swal.fire({
+                        title: 'Update Success!',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Update Failed!',
+                        icon: 'error',
+                        confirmButtonText: 'Close'
+                    });
+                }
+            },
+            complete: function(){
+                $(".loader").hide();
+            }
+        });
+    } 
+});
+
+$(document).on('click', '.updatemasterclass', function(){
+    var idproduk = $('#idproduk').val();
+    var idclass = $('#idclass').val();
+    var namaclass = $('#namaclass').val();
+    
+    if(namaclass == ""){
+        Swal.fire({
+            title: 'Warning!',
+            text: 'Nama Class Tidak Boleh Kosong!',
+            icon: 'warning',
+            confirmButtonText: 'Close'
+        });
+    } else {
+        let formData = new FormData();
+        formData.append('idproduk', idproduk);
+        formData.append('idclass', idclass);
+        formData.append('namaclass', namaclass);
+        
+        $.ajax({
+            url:"index.php?r=masterclass/proses_editclass",
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            beforeSend: function(){
+                $(".loader").show();
+            },
+            success:function(data){
+                var stat = $.parseJSON(data);
+                var statt = stat.status;
+                if(statt == "1"){
+                    load_masterclass();
+                    Swal.fire({
+                        title: 'Update Success!',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Update Failed!',
+                        icon: 'error',
+                        confirmButtonText: 'Close'
+                    });
+                }
+            },
+            complete: function(){
+                $(".loader").hide();
+            }
+        });
+    } 
+});
+
+$(document).on('click', '.updatemastermodel', function(){
+    var idproduk = $('#idproduk').val();
+    var idclass = $('#idclass').val();
+    var idmodel = $('#idmodel').val();
+    var namamodel = $('#namamodel').val();
+    
+    if(namamodel == ""){
+        Swal.fire({
+            title: 'Warning!',
+            text: 'Nama Model Tidak Boleh Kosong!',
+            icon: 'warning',
+            confirmButtonText: 'Close'
+        });
+    } else {
+        let formData = new FormData();
+        formData.append('idproduk', idproduk);
+        formData.append('idclass', idclass);
+        formData.append('idmodel', idmodel);
+        formData.append('namamodel', namamodel);
+        
+        $.ajax({
+            url:"index.php?r=mastermodel/proses_editmodel",
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            beforeSend: function(){
+                $(".loader").show();
+            },
+            success:function(data){
+                var stat = $.parseJSON(data);
+                var statt = stat.status;
+                if(statt == "1"){
+                    load_mastermodel();
+                    Swal.fire({
+                        title: 'Update Success!',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Update Failed!',
+                        icon: 'error',
+                        confirmButtonText: 'Close'
+                    });
+                }
+            },
+            complete: function(){
+                $(".loader").hide();
+            }
+        });
+    } 
+});
+
+$(document).on('click', '.updatemastertype', function(){
+    var idproduk = $('#idproduk').val();
+    var idclass = $('#idclass').val();
+    var idmodel = $('#idmodel').val();
+    var idtype = $('#idtype').val();
+    var namatype = $('#namatype').val();
+    
+    if(namatype == ""){
+        Swal.fire({
+            title: 'Warning!',
+            text: 'Nama Type Tidak Boleh Kosong!',
+            icon: 'warning',
+            confirmButtonText: 'Close'
+        });
+    } else {
+        let formData = new FormData();
+        formData.append('idproduk', idproduk);
+        formData.append('idclass', idclass);
+        formData.append('idmodel', idmodel);
+        formData.append('idtype', idtype);
+        formData.append('namatype', namatype);
+        
+        $.ajax({
+            url:"index.php?r=mastertype/proses_edittype",
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            beforeSend: function(){
+                $(".loader").show();
+            },
+            success:function(data){
+                var stat = $.parseJSON(data);
+                var statt = stat.status;
+                if(statt == "1"){
+                    load_mastertype();
+                    Swal.fire({
+                        title: 'Update Success!',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Update Failed!',
+                        icon: 'error',
+                        confirmButtonText: 'Close'
+                    });
+                }
+            },
+            complete: function(){
+                $(".loader").hide();
+            }
+        });
+    } 
+});
+
+$(document).on('click', '.deletemasterclassdata', function() {
+    var idclass = $(this).attr('attr-idclass');
+
+        Swal.fire({
+            title: 'Anda yakin akan delete class ini?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, Delete CLASS ini!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url:"index.php?r=masterclass/proses_deleteclass",
+                    method: "POST",
+                    data: {idclass: idclass},
+                    beforeSend: function(){
+                        $(".loader").show();
+                    },
+                    success: function(data){
+                        var stat = $.parseJSON(data);
+                        var statt = stat.status;
+                        if(statt == "1"){
+                            load_masterclass();
+                            Swal.fire({
+                            title: 'Delete Success!',
+                            icon: 'success',
+                            confirmButtonText: 'Close'
+                        });
+                        } else {
+                            Swal.fire({
+                            title: 'Delete Failed!',
+                            icon: 'error',
+                            confirmButtonText: 'Close'
+                        });
+                        }
+                    },
+                    complete: function(){
+                        $(".loader").hide();
+                    }
+                })
+            }
+        })
+})
+
+$(document).on('click', '.deletemastermodeldata', function() {
+    var idmodel = $(this).attr('attr-idmodel');
+
+    Swal.fire({
+        title: 'Anda yakin akan delete model ini?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Delete MODEL ini!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url:"index.php?r=mastermodel/proses_deletemodel",
+                method: "POST",
+                data: {idmodel: idmodel},
+                beforeSend: function(){
+                    $(".loader").show();
+                },
+                success: function(data){
+                    var stat = $.parseJSON(data);
+                    var statt = stat.status;
+                    if(statt == "1"){
+                        load_mastermodel();
+                        Swal.fire({
+                        title: 'Delete Success!',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    });
+                    } else {
+                        Swal.fire({
+                        title: 'Delete Failed!',
+                        icon: 'error',
+                        confirmButtonText: 'Close'
+                    });
+                    }
+                },
+                complete: function(){
+                    $(".loader").hide();
+                }
+            })
+        }
+    })
+
+})
+
+$(document).on('click', '.deletemastertypedata', function() { 
+    var idclass = $(this).attr('attr-idclass');
+
+        Swal.fire({
+            title: 'Anda yakin akan delete type ini?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, Delete TYPE ini!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url:"index.php?r=mastertype/proses_deletetype",
+                    method: "POST",
+                    data: {idtype: idclass},
+                    beforeSend: function(){
+                        $(".loader").show();
+                    },
+                    success: function(data){
+                        var stat = $.parseJSON(data);
+                        var statt = stat.status;
+                        if(statt == "1"){
+                            load_mastertype();
+                            Swal.fire({
+                            title: 'Delete Success!',
+                            icon: 'success',
+                            confirmButtonText: 'Close'
+                        });
+                        } else {
+                            Swal.fire({
+                            title: 'Delete Failed!',
+                            icon: 'error',
+                            confirmButtonText: 'Close'
+                        });
+                        }
+                    },
+                    complete: function(){
+                        $(".loader").hide();
+                    }
+                })
+            }
+        })
+})
 /////////////////// ON CLICK ///////////////////

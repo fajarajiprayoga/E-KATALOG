@@ -10,9 +10,36 @@ class DesignController extends Controller {
         }
         return $auth;
     }
+
+    private function Auth_eng(){
+        if(Yii::app()->user->isEng()){
+            $auth = '1';
+        } else {
+            $auth = '0';
+        }
+        return $auth;
+    }
+
+    private function Auth_sales(){
+        if(Yii::app()->user->isSales()){
+            $auth = '1';
+        } else {
+            $auth = '0';
+        }
+        return $auth;
+    }
+
+    private function Auth_all(){
+        if(Yii::app()->user->isAll()){
+            $auth = '1';
+        } else {
+            $auth = '0';
+        }
+        return $auth;
+    }
     
     public function actionIndex() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_sales() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('index', array(
                'idchasis' => $_POST['idchasis'], 
                'produk' => $_POST['produk'], 
@@ -31,7 +58,7 @@ class DesignController extends Controller {
     }
     
     public function actionForm_design() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_sales() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('form_design', array(
                 'idchasis' => $_POST['idchasis'],
                 'dept' => $_POST['dept'],
@@ -51,7 +78,7 @@ class DesignController extends Controller {
     }
     
     public function actionProses_upload_design() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_upload_design');
         } else {
             ?>
@@ -63,7 +90,7 @@ class DesignController extends Controller {
     }
     
     public function actionForm_edit_design() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('form_edit_design', array(
                 'idchasis' => $_POST['idchasis'],
                 'dept' => $_POST['dept'],
@@ -84,7 +111,7 @@ class DesignController extends Controller {
     }
     
     public function actionProses_update_design() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_update_design');
         } else {
             ?>
@@ -96,7 +123,7 @@ class DesignController extends Controller {
     }
     
     public function actionProses_delete_design() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_delete_design', array(
                 'dept' => $_POST['dept'],
                 'iddesign' => $_POST['iddesign'],

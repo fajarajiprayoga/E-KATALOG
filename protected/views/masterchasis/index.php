@@ -1,9 +1,11 @@
 <section class="py-2">
     <div class="row">
         <div>
+        <?php if(!Yii::app()->user->isSales()){ ?>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-sort"></i> Add
             </a>
+        <?php } ?>
         </div>
     </div>
     
@@ -32,7 +34,9 @@
                         <thead>
                           <tr align="left">
                             <th width="20px">No</th>
+                            <?php if(!Yii::app()->user->isSales()){ ?>
                             <th>Action</th>
+                            <?php } ?>
                             <th>Nama Chasis</th>
                             <th>Nama Type</th>
                             <th>Nama Model</th>
@@ -57,10 +61,12 @@
                             ?>
                           <tr align="left">
                             <td><?php echo $no++; ?></td>
+                            <?php if(!Yii::app()->user->isSales()){ ?>
                             <td>
                                 <i class="fas fa-trash-alt deletemasterchasis" attr-idchasis="<?php echo $idchasis; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
                                 <i class="fas fa-edit form_edit_chasis" attr-idchasis="<?php echo $idchasis; ?>" attr-idclass="<?php echo $idclass; ?>" attr-idproduk="<?php echo $idproduk; ?>" attr-idtype="<?php echo $idtype; ?>" attr-idmodel="<?php echo $idmodel; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                             </td>
+                            <?php } ?>
                             <td><?php echo $arr[]=$rowchasis["NAMA_CHASIS"]; ?></td>
                             <td>
                                 <?php
@@ -106,7 +112,11 @@
                                   </button>
                                   <div class="dropdown-menu">
                                     <a class="dropdown-item skrb" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $data['produk']; ?>" attr-class = "<?php echo $data['class']; ?>" attr-model = "<?php echo $data['model']; ?>" attr-chasis = "<?php echo $arr[]=$rowchasis["NAMA_CHASIS"]; ?>" attr-type = "<?php echo $data['type']; ?>" style="cursor: pointer;" >SKRB</a>
+
+                                    <?php if(!Yii::app()->user->isSales()){ ?>
                                     <a class="dropdown-item drawing" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $data['produk']; ?>" attr-class = "<?php echo $data['class']; ?>" attr-model = "<?php echo $data['model']; ?>" attr-chasis = "<?php echo $arr[]=$rowchasis["NAMA_CHASIS"]; ?>" attr-type = "<?php echo $data['type']; ?>" style="cursor: pointer;" >DRAWING</a>
+                                    <?php } ?>
+
                                     <a class="dropdown-item design" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $data['produk']; ?>" attr-class = "<?php echo $data['class']; ?>" attr-model = "<?php echo $data['model']; ?>" attr-chasis = "<?php echo $arr[]=$rowchasis["NAMA_CHASIS"]; ?>" attr-type = "<?php echo $data['type']; ?>" style="cursor: pointer;" >DESIGN</a>
                                   </div>
                                 </div>
@@ -133,7 +143,7 @@
                     <?php
                     $arr_produk = array();
                     $id=Yii::app()->user->id;
-                    $q_katalog_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK")->queryAll();
+                    $q_katalog_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK WHERE ISDEL_PRODUK IS NULL")->queryAll();
                     foreach ($q_katalog_produk as $row_produk){
                     ?>
                     <option value="<?php echo $arr_produk[]=$row_produk['ID_PRODUK']; ?>"><?php echo $arr_produk[]=$row_produk['NAMA_PRODUK']; ?></option>
@@ -147,7 +157,7 @@
                     <option value=""></option>
                     <?php
                     $arr_class = array();
-                    $q_katalog_class = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_CLASS")->queryAll();
+                    $q_katalog_class = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_CLASS WHERE ISDEL_CLASS IS NULL")->queryAll();
                     foreach ($q_katalog_class as $row_class){
                     ?>
                     <option value="<?php echo $arr_class[]=$row_class['ID_CLASS']; ?>"><?php echo $arr_class[]=$row_class['NAMA_CLASS']; ?></option>
@@ -161,7 +171,7 @@
                     <option value=""></option>
                     <?php
                     $arr_model = array();
-                    $q_katalog_model = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_MODEL")->queryAll();
+                    $q_katalog_model = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_MODEL WHERE ISDEL_MODEL IS NULL")->queryAll();
                     foreach ($q_katalog_model as $row_model){
                     ?>
                     <option value="<?php echo $arr_class[]=$row_model['ID_MODEL']; ?>"><?php echo $arr_class[]=$row_model['NAMA_MODEL']; ?></option>
@@ -177,7 +187,7 @@
                     <option value=""></option>
                     <?php
                     $arr_type = array();
-                    $q_katalog_type = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_TYPE")->queryAll();
+                    $q_katalog_type = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_TYPE WHERE ISDEL_TYPE IS NULL")->queryAll();
                     foreach ($q_katalog_type as $row_type){
                     ?>
                     <option value="<?php echo $arr_type[]=$row_type['ID_TYPE']; ?>"><?php echo $arr_type[]=$row_type['NAMA_TYPE']; ?></option>

@@ -78,7 +78,7 @@
                                 ?>
                             </td>
                             <td>
-                                <i class="fas fa-trash-alt deletemastertype" attr-idclass="<?php echo $arr[]=$rowtype["ID_TYPE"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
+                                <i class="fas fa-trash-alt deletemastertypedata" attr-idclass="<?php echo $arr[]=$rowtype["ID_TYPE"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
                                 <i class="fas fa-edit form_edit_type" attr-idproduk="<?php echo $idproduk; ?>" attr-idclass="<?php echo $idclass; ?>" attr-idmodel="<?php echo $idmodel; ?>" attr-idtype="<?php echo $arr[]=$rowtype["ID_TYPE"]; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                             </td>
                           </tr>

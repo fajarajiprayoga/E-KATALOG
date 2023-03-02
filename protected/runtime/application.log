@@ -8188,3 +8188,171 @@ REQUEST_URI=/~wipapps/E-KATALOG/index.php?r=masterchasis
 in /home/wipapps/public_html/E-KATALOG/protected/views/masterchasis/index.php (108)
 in /home/wipapps/public_html/E-KATALOG/protected/controllers/MasterchasisController.php (15)
 in /home/wipapps/public_html/E-KATALOG/index.php (22)
+2023/03/01 15:13:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (150)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:13:37 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(150): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:13:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (150)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:13:39 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(150): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:13:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (150)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:13:42 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT * FROM KATALOG_CLASS ISDEL_CLASS IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(150): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:14:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "ISDEL_MODEL": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_MODEL IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (136)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:14:28 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "ISDEL_MODEL": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_MODEL IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(136): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:14:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "ISDEL_MODEL": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_MODEL IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (136)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:14:29 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "ISDEL_MODEL": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_MODEL IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(136): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:14:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "ISDEL_CLASS": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_CLASS IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (136)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:14:54 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "ISDEL_CLASS": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_CLASS IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(136): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/01 15:14:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "ISDEL_CLASS": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_CLASS IS NULL.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php (136)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php (42)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/01 15:14:55 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "ISDEL_CLASS": invalid identifier. The SQL statement executed was: SELECT * FROM KATALOG_PRODUK WHERE ISDEL_CLASS IS NULL in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\masterchasis\index.php(136): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterchasisController.php(42): CController->renderPartial('index')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterchasisController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---

@@ -10,9 +10,27 @@ class DrawingController extends Controller {
         }
         return $auth;
     }
+
+    private function Auth_eng(){
+        if(Yii::app()->user->isEng()){
+            $auth = '1';
+        } else {
+            $auth = '0';
+        }
+        return $auth;
+    }
+
+    private function Auth_all(){
+        if(Yii::app()->user->isAll()){
+            $auth = '1';
+        } else {
+            $auth = '0';
+        }
+        return $auth;
+    }
     
     public function actionIndex() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('index', array(
                'idchasis' => $_POST['idchasis'], 
                'produk' => $_POST['produk'], 
@@ -31,7 +49,7 @@ class DrawingController extends Controller {
     }
     
     public function actionForm_drawing() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('form_drawing', array(
                 'idchasis' => $_POST['idchasis'],
                 'dept' => $_POST['dept'],
@@ -51,7 +69,7 @@ class DrawingController extends Controller {
     }
     
     public function actionProses_upload_drawing() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_upload_drawing');
         } else {
             ?>
@@ -63,7 +81,7 @@ class DrawingController extends Controller {
     }
     
     public function actionForm_edit_drawing() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('form_edit_drawing', array(
                 'idchasis' => $_POST['idchasis'],
                 'dept' => $_POST['dept'],
@@ -84,7 +102,7 @@ class DrawingController extends Controller {
     }
     
     public function actionProses_update_drawing() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_update_drawing');
         } else {
             ?>
@@ -96,7 +114,7 @@ class DrawingController extends Controller {
     }
     
     public function actionProses_delete_drawing() {
-        if($this->Auth_adm() == '1' /*AND $this->cekotp() == '1'*/){
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
            $this->renderPartial('proses_delete_drawing', array(
                 'dept' => $_POST['dept'],
                 'iddrawingeng' => $_POST['iddrawingeng'],

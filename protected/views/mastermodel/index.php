@@ -68,7 +68,7 @@
                                 ?>
                             </td>
                             <td>
-                                <i class="fas fa-trash-alt deletemastermodel" attr-idmodel="<?php echo $arr[]=$rowmodel["ID_MODEL"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
+                                <i class="fas fa-trash-alt deletemastermodeldata" attr-idmodel="<?php echo $arr[]=$rowmodel["ID_MODEL"]; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
                                 <i class="fas fa-edit form_edit_model" attr-idproduk="<?php echo $idproduk; ?>" attr-idclass="<?php echo $idclass; ?>" attr-idmodel="<?php echo $arr[]=$rowmodel["ID_MODEL"]; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                             </td>
                           </tr>
