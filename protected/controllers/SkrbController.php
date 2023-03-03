@@ -39,7 +39,7 @@ class SkrbController extends Controller {
     
     public function actionIndex() {
         if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_sales() == '1' || $this->Auth_all() == '1'){
-           $this->renderPartial('index', array(
+           $this->renderPartial('index2', array(
                'idchasis' => $_POST['idchasis'], 
                'produk' => $_POST['produk'], 
                'clas' => $_POST['clas'],

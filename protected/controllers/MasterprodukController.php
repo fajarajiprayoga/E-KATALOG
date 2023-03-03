@@ -67,6 +67,24 @@ class MasterprodukController extends Controller {
             <?php
         }
     }
+
+    public function actionDetail_produk() {
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
+            $idproduk = $_POST['idproduk'];
+            $q_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK WHERE ISDEL_PRODUK IS NULL AND ID_PRODUK = '$idproduk'")->queryAll();
+            foreach($q_produk as $rowproduk){
+                $data['IDPRODUK'] = $arr[]=$rowproduk["ID_PRODUK"];
+                $data['NAMAPRODUK'] = $arr[]=$rowproduk["NAMA_PRODUK"];
+            }
+            echo json_encode($data);
+         } else {
+             ?>
+                 <script type="text/javascript">
+                     window.location.href = "index.php?r=site/logout";
+                 </script>
+             <?php
+         }
+    }
     
      public function actionProses_editproduk() {
         if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){

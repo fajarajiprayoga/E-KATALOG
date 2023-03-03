@@ -1,13 +1,13 @@
 <section class="py-2">
-    <div class="row">
+    <!-- <div class="row">
         <div>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-sort"></i> Add
             </a>
         </div>
-    </div>
+    </div> -->
     
-    <div class="collapse py-2" id="collapseAdd">
+    <!-- <div class="collapse py-2" id="collapseAdd">
         <div class="card-header">
             <h6 class="text-uppercase mb-0">Add Class</h6>
         </div>
@@ -34,14 +34,15 @@
                 </div>
             </div>
       </div>
-    </div>
+    </div> -->
 </section>
 <section class="py-1">
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
-            <div class="card-header">
-                <h6 class="text-uppercase mb-0">Master Class</h6>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="text-uppercase mb-0 mt-1">Master Class</h6>
+                <button class="btn btn-primary btn-sm px-3 rounded btnaddclass"><i class="fas fa-plus"></i> Tambah</button>
             </div>
             <div class="card-body">
                 <div style="overflow-x:auto; position: relative;">
@@ -88,53 +89,55 @@
       </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="classModal" tabindex="-1" role="dialog" aria-labelledby="classModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title text-lg" id="classModalLabel">Modal title</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                <input type="hidden" name="idclass" id="idclass">
+                <div>
+                    <label>Nama Produk : </label>
+                    <select class="form-control" id="idproduk">
+                        <option value="" disabled selected hidden>PILIH PRODUK</option>
+                        <option id="old_produk" class="d-none" selected></option>
+                        <?php
+                            $query_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK WHERE ISDEL_PRODUK IS NULL")->queryAll();
+                            $arr = array();
+                            foreach($query_produk as $rowproduk){
+                        ?>
+                        <option value="<?php echo $arr[]=$rowproduk['ID_PRODUK']; ?>"><?php echo $arr[]=$rowproduk['NAMA_PRODUK']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <label>Nama Class : </label>
+                    <input type="text" class="form-control form-control-sm" id="namaclass" oninput="this.value = this.value.toUpperCase()">
+                </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="btnsaveclass" type="submit" class="btn d-none hiden btn-primary addclass">Simpan</button>
+        <button id="btnupdateclass" type="submit" class="btn d-none btn-primary updatemasterclass">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 $('#myTable').DataTable();
 
-// $(document).ready(function() {
-//     $('.deletemasterclassdata').on('click', function() {
-//         var idclass = $(this).attr('attr-idclass');
-
-//         Swal.fire({
-//             title: 'Anda yakin akan delete class ini?',
-//             icon: 'warning',
-//             showCancelButton: true,
-//             confirmButtonColor: '#3085d6',
-//             cancelButtonColor: '#d33',
-//             confirmButtonText: 'Ya, Delete CLASS ini!'
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 $.ajax({
-//                     url:"index.php?r=masterclass/proses_deleteclass",
-//                     method: "POST",
-//                     data: {idclass: idclass},
-//                     beforeSend: function(){
-//                         $(".loader").show();
-//                     },
-//                     success: function(data){
-//                         var stat = $.parseJSON(data);
-//                         var statt = stat.status;
-//                         if(statt == "1"){
-//                             load_masterclass();
-//                             Swal.fire({
-//                             title: 'Delete Success!',
-//                             icon: 'success',
-//                             confirmButtonText: 'Close'
-//                         });
-//                         } else {
-//                             Swal.fire({
-//                             title: 'Delete Failed!',
-//                             icon: 'error',
-//                             confirmButtonText: 'Close'
-//                         });
-//                         }
-//                     },
-//                     complete: function(){
-//                         $(".loader").hide();
-//                     }
-//                 })
-//             }
-//         })
-//     })
-// })
+$(document).ready(function() {
+    $('.btnaddclass').on('click', function() {
+        $('#classModalLabel').text('Form tambah class');
+        $('#btnsaveclass').removeClass('d-none');
+        $('#classModal').modal('show');
+    });
+})
 </script>

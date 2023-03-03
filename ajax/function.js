@@ -327,15 +327,13 @@ function load_proses_addproduk(namaproduk)
             var stat = $.parseJSON(response);
             var statt = stat.status; 
             if(statt == '1'){
-                $('#produkModal').modal('hide');
                 load_masterproduk();
-                // Swal.fire({
-                //     title: 'Add Success!',
-                //     icon: 'success',
-                //     confirmButtonText: 'Close'
-                // });   
+                Swal.fire({
+                    title: 'Add Success!',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                });   
             } else{
-                $('#produkModal').modal('hide');
                 Swal.fire({
                     title: 'Add Failed!',
                     icon: 'error',
@@ -435,6 +433,7 @@ function load_mastermodel()
 
 function load_proses_addmodel(tumpuk)
 {
+    $('#modelModal').modal('hide');
     $.ajax({
         url:"index.php?r=mastermodel/proses_addmodel",
         method:"POST",

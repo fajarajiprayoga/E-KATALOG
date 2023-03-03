@@ -1,17 +1,17 @@
 <section class="py-2">
-    <div class="row">
+    <!-- <div class="row">
         <div>
             <a class="btn btn-primary" id="buttonku" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-sort"></i> Add
             </a>
         </div>
-    </div>
+    </div> -->
     
-    <div class="collapse py-2" id="collapseAdd">
+    <!-- <div class="collapse py-2" id="collapseAdd">
         <div class="card-header">
             <h6 class="text-uppercase mb-0">Add Produk</h6>
         </div>
-      <!-- <div class="card card-body">
+      <div class="card card-body">
           <center><i class="fas fa-save addproduk" style="font-size: 3em; color: blue; cursor: pointer;"></i></center>
             <div class="row py-2">
                 <div class="col-md-4">
@@ -19,8 +19,8 @@
                     <input type="text" class="form-control form-control-sm" id="namaproduk" oninput="this.value = this.value.toUpperCase()">
                 </div>
             </div>
-      </div> -->
-    </div>
+      </div>
+    </div> -->
 </section>
 <section class="py-1">
     <div class="row">
@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h6 class="text-uppercase mb-0 mt-2">Master Produk</h6>
-                <button class="btn btn-primary btn-sm px-3 rounded-0 btnaddproduk"><i class="fas fa-plus"></i> Tambah</button>
+                <button class="btn btn-primary btn-sm px-3 rounded btnaddproduk"><i class="fas fa-plus"></i> Tambah</button>
             </div>
             <div class="card-body">
                 <div style="overflow-x:auto; position: relative;">
@@ -71,12 +71,13 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="produkModalLabel">Modal title</h5>
+        <span class="modal-title text-lg" id="produkModalLabel">Modal title</span>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+          <input type="hidden" name="idproduk" id="idproduk">
           <label>Nama Produk : </label>
           <input type="text" class="form-control form-control-sm" id="namaproduk" oninput="this.value = this.value.toUpperCase()">
       </div>
@@ -100,11 +101,6 @@
 
     $('.addproduk').on('click', function() {
       $('#produkModal').modal('hide');
-    });
-
-    $('.form_edit_produk').on('click', function(){
-        var idproduk = $(this).attr('attr-idproduk');
-        // load_formeditproduk(idproduk);
     });
   })
 </script>

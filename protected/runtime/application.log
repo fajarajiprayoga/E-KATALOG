@@ -8356,3 +8356,1128 @@ Stack trace:
 REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis
 HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
 ---
+2023/03/02 09:42:50 [error] [exception.CException] CException: MasterprodukController and its behaviors do not have a method or closure named "return". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php(73): CComponent->__call('return', Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MasterprodukController->actionDetail_produk()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_produk')
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterproduk/de...')
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#9 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterproduk/detail_produk
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=site/login
+---
+2023/03/02 09:45:38 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MasterprodukController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MasterprodukController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MasterprodukController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterproduk/detail_produk
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php (79)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 09:45:44 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MasterprodukController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MasterprodukController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MasterprodukController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterproduk/detail_produk
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php (79)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 09:46:03 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MasterprodukController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MasterprodukController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MasterprodukController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterproduk/detail_produk
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MasterprodukController.php (79)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 10:22:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_class". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_class')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_class')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterclass/det...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterclass/detail_class
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=site/login
+---
+2023/03/02 13:31:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "savemodel". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('savemodel')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('savemodel')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/sav...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/savemodel
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/02 13:32:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "savemodel". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('savemodel')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('savemodel')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/sav...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/savemodel
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/02 13:33:25 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/save_model
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (59)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 13:33:59 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/save_model
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (59)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 13:34:42 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/store
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (59)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 13:35:01 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/store
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (59)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 13:35:07 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/store
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (59)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 14:01:16 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_model". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_model')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_model')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/det...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/detail_model
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/02 14:04:07 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:116)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/detail_model
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (116)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 14:04:17 [error] [php] Array to string conversion (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php:116)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastermodelController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastermodelController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastermodelController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/detail_model
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (116)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 14:12:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_MODEL SET NAMA_MODEL = 'MOBIL BOX NI YEEE', ID_PRODUK = 'undefined', ID_CLASS = 'undefined' WHERE ID_MODEL='421'.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastermodel\proses_editmodel.php (13)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php (128)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/02 14:12:51 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_MODEL SET NAMA_MODEL = 'MOBIL BOX NI YEEE', ID_PRODUK = 'undefined', ID_CLASS = 'undefined' WHERE ID_MODEL='421' in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastermodel\proses_editmodel.php(13): CDbCommand->execute()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastermodelController.php(128): CController->renderPartial('proses_editmode...')
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastermodelController->actionProses_editmodel()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('proses_editmode...')
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/pro...')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/proses_editmodel
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:04:46 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:04:50 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:04:54 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:05:19 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:05:51 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:06:08 [error] [php] Undefined variable: idtype (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): MastertypeController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(33): MastertypeController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): MastertypeController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): MastertypeController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): MastertypeController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\index.php (163)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (33)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:06:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_type". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_type')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_type')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/det...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/detail_type
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:06:55 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_type". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_type')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_type')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastermodel/det...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastermodel/detail_type
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:29:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU SATUNYA', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441'.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php (14)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (138)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:29:57 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU SATUNYA', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441' in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php(14): CDbCommand->execute()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(138): CController->renderPartial('proses_edittype')
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionProses_edittype()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('proses_edittype')
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastertype/pros...')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype/proses_edittype
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:30:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU SATUNYA', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441'.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php (14)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (138)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:30:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU SATUNYA', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441' in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php(14): CDbCommand->execute()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(138): CController->renderPartial('proses_edittype')
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionProses_edittype()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('proses_edittype')
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastertype/pros...')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype/proses_edittype
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:33:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441'.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php (14)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (138)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:33:03 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441' in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php(14): CDbCommand->execute()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(138): CController->renderPartial('proses_edittype')
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionProses_edittype()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('proses_edittype')
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastertype/pros...')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype/proses_edittype
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 09:33:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441'.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php (14)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php (138)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 09:33:39 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-01722: invalid number. The SQL statement executed was: UPDATE KATALOG_TYPE SET NAMA_TYPE = 'TESSATUU', ID_PRODUK = 'undefined', ID_CLASS = 'undefined', ID_MODEL = 'undefined' WHERE ID_TYPE = '441' in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\mastertype\proses_edittype.php(14): CDbCommand->execute()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\MastertypeController.php(138): CController->renderPartial('proses_edittype')
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): MastertypeController->actionProses_edittype()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('proses_edittype')
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('mastertype/pros...')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#13 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=mastertype/proses_edittype
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 10:18:35 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_chasis". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_chasis')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_chasis')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis/de...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis/detail_chasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 10:20:38 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "detail_chasis". in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(270): CController->missingAction('detail_chasis')
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('detail_chasis')
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('masterchasis/de...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#5 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=masterchasis/detail_chasis
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 14:41:05 [error] [php] Undefined variable: dir (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:90)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (90)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 14:41:08 [error] [php] Undefined variable: dir (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:90)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (90)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 14:41:43 [error] [php] Undefined variable: dept (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:84)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (84)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 14:41:49 [error] [php] Undefined variable: dept (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:84)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (84)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 14:42:43 [error] [php] Undefined variable: dept (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (83)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 14:43:54 [error] [php] Undefined index: dept (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php:49)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (49)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:05:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE = NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:05:46 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE = NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:06:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE NOT ISHIDE ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:06:12 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE NOT ISHIDE ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:06:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:06:20 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:07:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:07:00 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:07:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "IDCHASIS": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:07:20 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "IDCHASIS": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                IDCHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:08:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:08:03 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:08:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:08:12 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ISHIDE IS NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:08:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (93)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:08:51 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00933: SQL command not properly ended. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:09:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (92)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:09:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' WHERE ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(92): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:09:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (92)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:09:18 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(92): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:10:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (92)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:10:03 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00936: missing expression. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(92): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:21:06 [error] [php] Undefined index: UPDATEATE_AT (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:114)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (114)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:21:18 [error] [php] Undefined index: UPDATE_AT (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php:114)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): SkrbController->renderPartial()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (114)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:21:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "UPDATED_AT": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                TO_CHAR(UPDATED_AT,'DD/MM/YYYY') UPDATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' AND ISHIDE IS NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (94)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:21:57 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "UPDATED_AT": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                TO_CHAR(UPDATED_AT,'DD/MM/YYYY') UPDATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' AND ISHIDE IS NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(94): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:22:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: ORA-00904: "UPDATED_AT": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                TO_CHAR(UPDATED_AT,'DD/MM/YYYY') UPDATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' AND ISHIDE IS NULL ORDER BY ISLASTVERSION ASC.
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php (94)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (48)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:22:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: ORA-00904: "UPDATED_AT": invalid identifier. The SQL statement executed was: SELECT
+                                                                TO_CHAR(CREATED_AT,'DD/MM/YYYY') CREATE_AT,
+                                                                TO_CHAR(UPDATED_AT,'DD/MM/YYYY') UPDATE_AT,
+                                                                FILE_NAME,
+                                                                FILE_VERSION,
+                                                                ISLASTVERSION,
+                                                                FILE_DESKRIPSI,
+                                                                ID_SKRB_SALES,
+                                                                ISHIDE,
+                                                                ID_CHASIS
+                                                                FROM KATALOG_SKRB_SALES WHERE ID_CHASIS = '161' AND ISHIDE IS NULL ORDER BY ISLASTVERSION ASC in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\index2.php(94): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(48): CController->renderPartial('index2', Array)
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionIndex()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController('skrb')
+#12 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CApplication->run()
+#14 {main}
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb
+HTTP_REFERER=http://localhost/armadaserver/UPTODATE%20APP/E-KATALOG/index.php
+---
+2023/03/03 15:58:48 [error] [php] move_uploaded_file(FILE/SKRB/ENG/03035848-20124144-ASSEMBLY TUTUP BAGASI PLAFON NA22 (3).pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\proses_upload_skrb.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): SkrbController->renderInternal()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(81): SkrbController->renderPartial()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionProses_upload_skrb()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb/proses_upload_skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\proses_upload_skrb.php (23)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (81)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)
+2023/03/03 15:58:55 [error] [php] move_uploaded_file(FILE/SKRB/ENG/03035855-20124144-ASSEMBLY TUTUP BAGASI PLAFON NA22 (3).pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\proses_upload_skrb.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CBaseController.php(95): SkrbController->renderInternal()
+#1 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(872): SkrbController->renderFile()
+#2 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php(81): SkrbController->renderPartial()
+#3 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\actions\CInlineAction.php(49): SkrbController->actionProses_upload_skrb()
+#4 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(286): SkrbController->runAction()
+#6 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CController.php(265): SkrbController->runActionWithFilters()
+#7 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(282): SkrbController->run()
+#8 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php(22): CWebApplication->run()
+REQUEST_URI=/armadaserver/UPTODATE%20APP/E-KATALOG/index.php?r=skrb/proses_upload_skrb
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\views\skrb\proses_upload_skrb.php (23)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\protected\controllers\SkrbController.php (81)
+in C:\xampp\htdocs\armadaserver\UPTODATE APP\E-KATALOG\index.php (22)

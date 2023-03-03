@@ -1,5 +1,5 @@
 <section class="py-2">
-    <div class="row">
+    <!-- <div class="row">
         <div>
         <?php if(!Yii::app()->user->isSales()){ ?>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdd" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -18,14 +18,15 @@
           <i class="fas fa-plus add-more" style="color: blue; cursor: pointer;"></i>
           <div class="after-add-more"></div>
       </div>
-    </div>
+    </div> -->
 </section>
 <section class="py-1">
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
-            <div class="card-header">
-                <h6 class="text-uppercase mb-0">Master Chasis</h6>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="text-uppercase mb-0 mt-1">Master Chasis</h6>
+                <button class="btn btn-primary btn-sm px-3 rounded btnaddchasis"><i class="fas fa-plus"></i> Tambah</button>
             </div>
             
             <div class="card-body">
@@ -42,7 +43,7 @@
                             <th>Nama Model</th>
                             <th>Nama Class</th>
                             <th>Nama Produk</th>
-                            <th>Action</th>
+                            <th>Detail</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -60,9 +61,9 @@
                                 $data =[];
                             ?>
                           <tr align="left">
-                            <td><?php echo $no++; ?></td>
+                            <td class="text-center"><?php echo $no++; ?></td>
                             <?php if(!Yii::app()->user->isSales()){ ?>
-                            <td>
+                            <td class="text-center">
                                 <i class="fas fa-trash-alt deletemasterchasis" attr-idchasis="<?php echo $idchasis; ?>"  style="font-size: 13pt; cursor: pointer;"></i>
                                 <i class="fas fa-edit form_edit_chasis" attr-idchasis="<?php echo $idchasis; ?>" attr-idclass="<?php echo $idclass; ?>" attr-idproduk="<?php echo $idproduk; ?>" attr-idtype="<?php echo $idtype; ?>" attr-idmodel="<?php echo $idmodel; ?>" style="font-size: 13pt; cursor: pointer;"></i>
                             </td>
@@ -104,12 +105,10 @@
                                     }
                                 ?>
                             </td>
-                            <td>
+                            <td class="text-center">
                                 <!-- Default dropright button -->
                                 <div class="btn-group dropright">
-                                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Action
-                                  </button>
+                                    <i class="fas fa-ellipsis-h" style="font-size: 13pt; cursor: pointer;" data-toggle="dropdown" ></i>
                                   <div class="dropdown-menu">
                                     <a class="dropdown-item skrb" attr-idchasis = "<?php echo $idchasis; ?>" attr-produk = "<?php echo $data['produk']; ?>" attr-class = "<?php echo $data['class']; ?>" attr-model = "<?php echo $data['model']; ?>" attr-chasis = "<?php echo $arr[]=$rowchasis["NAMA_CHASIS"]; ?>" attr-type = "<?php echo $data['type']; ?>" style="cursor: pointer;" >SKRB</a>
 
@@ -132,7 +131,7 @@
     </div>
 </section>
 
-<div class="copy invisible">
+<!-- <div class="copy invisible">
     <div class="wadah">
         <div class="row py-2">
             <div class="col-md-4 subwadah">
@@ -203,6 +202,94 @@
         </div>
         <hr style="border: 1px solid #1E90FF;">
     </div>
+</div> -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="chasisModal" tabindex="-1" role="dialog" aria-labelledby="chasisModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title text-lg" id="chasisModalLabel">Modal title</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="">
+      <div class="">
+                <input type="hidden" value="1" name="id[]">
+                <input type="hidden" name="idchasis" id="idchasis">
+                <label>Nama Produk : </label>
+                <select class="form-control form-control-sm js-example-basic-single2" id="addproduk" name="addproduk" style="width: 100%;">
+                    <option value=""></option>
+                    <option id="old_produk" class="d-none" selected></option>
+                    <?php
+                    $arr_produk = array();
+                    $id=Yii::app()->user->id;
+                    $q_katalog_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK WHERE ISDEL_PRODUK IS NULL")->queryAll();
+                    foreach ($q_katalog_produk as $row_produk){
+                    ?>
+                    <option value="<?php echo $arr_produk[]=$row_produk['ID_PRODUK']; ?>"><?php echo $arr_produk[]=$row_produk['NAMA_PRODUK']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="mt-2">
+                <label>Nama Class : </label>
+                <select class="form-control form-control-sm js-example-basic-single2" id="addclass" name="addclass" style="width: 100%;">
+                    <option value=""></option>
+                    <option id="old_class" class="d-none" selected></option>
+                    <?php
+                    $arr_class = array();
+                    $q_katalog_class = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_CLASS WHERE ISDEL_CLASS IS NULL")->queryAll();
+                    foreach ($q_katalog_class as $row_class){
+                    ?>
+                    <option value="<?php echo $arr_class[]=$row_class['ID_CLASS']; ?>"><?php echo $arr_class[]=$row_class['NAMA_CLASS']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="mt-2">
+                <label>Nama Model : </label>
+                <select class="form-control form-control-sm js-example-basic-single2" id="addmodel" name="addmodel" style="width: 100%;">
+                    <option value=""></option>
+                    <option id="old_model" class="d-none" selected></option>
+                    <?php
+                    $arr_model = array();
+                    $q_katalog_model = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_MODEL WHERE ISDEL_MODEL IS NULL")->queryAll();
+                    foreach ($q_katalog_model as $row_model){
+                    ?>
+                    <option value="<?php echo $arr_class[]=$row_model['ID_MODEL']; ?>"><?php echo $arr_class[]=$row_model['NAMA_MODEL']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+        </div>
+        <div class="mt-2">
+            <label>Nama Type : </label>
+            <select class="form-control form-control-sm js-example-basic-single2" id="addtype" name="addtype" style="width: 100%;">
+                <option value=""></option>
+                <option id="old_type" class="d-none" selected></option>
+                <?php
+                $arr_type = array();
+                $q_katalog_type = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_TYPE WHERE ISDEL_TYPE IS NULL")->queryAll();
+                foreach ($q_katalog_type as $row_type){
+                ?>
+                <option value="<?php echo $arr_type[]=$row_type['ID_TYPE']; ?>"><?php echo $arr_type[]=$row_type['NAMA_TYPE']; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="mt-2">
+            <label>Nama Chasis : </label>
+            <input type="text" class="form-control form-control-sm" id="namachasis" name="namachasis" oninput="this.value = this.value.toUpperCase()">
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="btnsavechasis" type="submit" class="btn d-none hiden btn-primary savechasis">Simpan</button>
+        <button id="btnupdatechasis" type="submit" class="btn d-none btn-primary updatemasterchasis">Simpan</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/select2-master/dist/js/select2.min.js"></script>
@@ -233,5 +320,11 @@
       });
       
       $('#myTable').DataTable();
+
+      $('.btnaddchasis').on('click', function() {
+            $('#chasisModalLabel').text('Form tambah chasis');
+            $('#btnsavechasis').removeClass('d-none');
+            $('#chasisModal').modal('show');
+        });
     });
 </script>

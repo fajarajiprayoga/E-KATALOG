@@ -111,6 +111,9 @@ $(document).on('click', '.masterclass', function(){
 $(document).on('click', '.addclass', function(){
     var namaclass = document.getElementById("namaclass").value;
     var idproduk = document.getElementById("idproduk").value;
+    
+    $('#classModal').modal('hide');
+
     load_proses_addclass(namaclass, idproduk);
 });
 
@@ -130,6 +133,7 @@ $(document).on('click', '.insertmodel', function(){
         var statProd = "";
         var statClas = "";
         var statModel = "";
+        $('#modelModal').modal('hide');
         
         for (var i = 0; i < id.length; i++) {
             var cekkolom = id[i];
@@ -202,7 +206,6 @@ $(document).on('click', '.insertmodel', function(){
                     
                     tumpuk.push(finalProd.value, finalClas.value, finalModel.value,'|');
                 }
-                //alert(tumpuk);
                 load_proses_addmodel(tumpuk);
             }
             
@@ -217,6 +220,116 @@ $(document).on('click', '.insertmodel', function(){
         
     });
     
+$(document).on('click', '.savemodel', function() {
+    var produk = $('#addproduk').val();
+    var clas = $('#addclass').val();
+    var model =$('#namamodel').val();
+    $('#modelModal').modal('hide');
+
+    $.ajax({
+        url:"index.php?r=mastermodel/store",
+        method: "POST",
+        data: {
+            produk: produk,
+            class: clas,
+            model: model
+        },beforeSend: function(){
+            $(".loader").show();
+        },success:function(response){
+            load_mastermodel();
+            Swal.fire({
+                title: 'Add Success!',
+                icon: 'success',
+                confirmButtonText: 'Close'
+            });   
+        },error: function(response){
+            Swal.fire({
+                title: 'Failed!',
+                icon: 'error',
+                confirmButtonText: 'Close'
+            });
+        },
+        complete: function(){
+         $(".loader").hide();
+        }
+    })
+})
+
+$(document).on('click', '.savetype', function() {
+    var produk = $('#addproduk').val();
+    var clas = $('#addclass').val();
+    var model =$('#addmodel').val();
+    var type =$('#namatype').val();
+    $('#typeModal').modal('hide');
+
+    $.ajax({
+        url:"index.php?r=mastertype/store",
+        method: "POST",
+        data: {
+            produk: produk,
+            class: clas,
+            model: model,
+            type: type
+        },beforeSend: function(){
+            $(".loader").show();
+        },success:function(response){
+            load_mastertype();
+            Swal.fire({
+                title: 'Add Success!',
+                icon: 'success',
+                confirmButtonText: 'Close'
+            });   
+        },error: function(response){
+            Swal.fire({
+                title: 'Failed!',
+                icon: 'error',
+                confirmButtonText: 'Close'
+            });
+        },
+        complete: function(){
+         $(".loader").hide();
+        }
+    })
+})
+
+$(document).on('click', '.savechasis', function() {
+    var produk = $('#addproduk').val();
+    var clas = $('#addclass').val();
+    var model =$('#addmodel').val();
+    var type =$('#addtype').val();
+    var chasis =$('#namachasis').val();
+    $('#chasisModal').modal('hide');
+
+    $.ajax({
+        url:"index.php?r=masterchasis/store",
+        method: "POST",
+        data: {
+            produk: produk,
+            class: clas,
+            model: model,
+            type: type,
+            chasis: chasis
+        },beforeSend: function(){
+            $(".loader").show();
+        },success:function(response){
+            load_masterchasis();
+            Swal.fire({
+                title: 'Add Success!',
+                icon: 'success',
+                confirmButtonText: 'Close'
+            });   
+        },error: function(response){
+            Swal.fire({
+                title: 'Failed!',
+                icon: 'error',
+                confirmButtonText: 'Close'
+            });
+        },
+        complete: function(){
+         $(".loader").hide();
+        }
+    })
+})
 
 $(document).on('click', '.mastertype', function(){
     load_mastertype();
@@ -595,16 +708,47 @@ $(document).on('click', '.uploadskrb', function(){
     }
 });
 
-// $(document).on('click', '.form_edit_produk', function(){
-//     var idproduk = $(this).attr('attr-idproduk');
-//     load_formeditproduk(idproduk);
-// });
+$(document).on('click', '.form_edit_produk', function(){
+    var idproduk = $(this).attr('attr-idproduk');
+    $('#produkModalLabel').text('Form edit produk');
+    $('#btnupdateproduk').removeClass('d-none');
+    $('#produkModal').modal('show');
+    // load_formeditproduk(idproduk);
+    $.ajax({
+        url:"index.php?r=masterproduk/detail_produk",
+        method:"POST",
+        data:{idproduk:idproduk},
+        success:function(data){
+            var data = JSON.parse(data);
+            $('#idproduk').val(data.IDPRODUK);
+            $('#namaproduk').val(data.NAMAPRODUK);
+        }
+    });
+});
 
 $(document).on('click', '.form_edit_class', function(){
     var idclass = $(this).attr('attr-idclass');
     var idproduk = $(this).attr('attr-idproduk');
-    
-    load_formeditclass(idproduk, idclass);
+    $('#classModalLabel').text('Form tambah class');
+    $('#btnupdateclass').removeClass('d-none');
+    $('#old_produk').removeClass('d-none');
+    $('#classModal').modal('show');
+    // load_formeditclass(idproduk, idclass);
+    $.ajax({
+        url:"index.php?r=masterclass/detail_class",
+        method:"POST",
+        data:{
+            idproduk:idproduk,
+            idclass:idclass
+        },
+        success:function(data){
+            var data = JSON.parse(data);
+            $('#idclass').val(data.IDCLASS);
+            $('#old_produk').text(data.NAMAPRODUK);
+            $('#old_produk').val(data.IDPRODUK);
+            $('#namaclass').val(data.NAMACLASS);
+        }
+    });
 });
 
 $(document).on('click', '.form_edit_model', function(){
@@ -612,8 +756,41 @@ $(document).on('click', '.form_edit_model', function(){
     var idproduk = $(this).attr('attr-idproduk');
     var idmodel = $(this).attr('attr-idmodel');
     
-    load_formeditmodel(idproduk, idclass, idmodel);
+    // load_formeditmodel(idproduk, idclass, idmodel);
+    $('#modelModalLabel').text('Form edit model');
+    $('#btnupdatemodel').removeClass('d-none');
+    $('#btnsavemodel').addClass('d-none');
+    $('#old_produk').removeClass('d-none');
+    $('#modelModal').modal('show');
+
+    $.ajax({
+        url:"index.php?r=mastermodel/detail_model",
+        method:"POST",
+        data:{
+            idproduk:idproduk,
+            idclass:idclass,
+            idmodel: idmodel
+        },
+        success:function(data){
+            var data = JSON.parse(data);
+            $('#idmodel').val(data.IDMODEL);
+            $('#old_produk').text(data.NAMAPRODUK);
+            $('#old_produk').val(data.IDPRODUK);
+            $('#old_class').text(data.NAMACLASS);
+            $('#old_class').val(data.IDCLASS);
+            $('#namamodel').val(data.NAMAMODEL);
+        }
+    });
 });
+
+// $(document).on('click', '.form_edit_type', function(){
+//     var idclass = $(this).attr('attr-idclass');
+//     var idproduk = $(this).attr('attr-idproduk');
+//     var idmodel = $(this).attr('attr-idmodel');
+//     var idtype = $(this).attr('attr-idtype');
+    
+//     load_formedittype(idproduk, idclass, idmodel, idtype);
+// });
 
 $(document).on('click', '.form_edit_type', function(){
     var idclass = $(this).attr('attr-idclass');
@@ -621,7 +798,33 @@ $(document).on('click', '.form_edit_type', function(){
     var idmodel = $(this).attr('attr-idmodel');
     var idtype = $(this).attr('attr-idtype');
     
-    load_formedittype(idproduk, idclass, idmodel, idtype);
+    $('#typeModallLabel').text('Form edit type');
+    $('#btnupdatetype').removeClass('d-none');
+    $('#btnsavetype').addClass('d-none');
+    $('#old_produk').removeClass('d-none');
+    $('#typeModal').modal('show');
+
+    $.ajax({
+        url:"index.php?r=mastertype/detail_type",
+        method:"POST",
+        data:{
+            idproduk:idproduk,
+            idclass:idclass,
+            idmodel: idmodel,
+            idtype: idtype
+        },
+        success:function(data){
+            var data = JSON.parse(data);
+            $('#idtype').val(data.IDTYPE);
+            $('#old_produk').text(data.NAMAPRODUK);
+            $('#old_produk').val(data.IDPRODUK);
+            $('#old_class').text(data.NAMACLASS);
+            $('#old_class').val(data.IDCLASS);
+            $('#old_model').text(data.NAMAMODEL);
+            $('#old_model').val(data.IDMODEL);
+            $('#namatype').val(data.NAMATYPE);
+        }
+    });
 });
 
 $(document).on('click', '.formeditskrb', function(){
@@ -1474,19 +1677,49 @@ $(document).on('click', '.form_edit_chasis', function(){
     var idmodel = $(this).attr('attr-idmodel');
     var idproduk = $(this).attr('attr-idproduk');
     var idtype = $(this).attr('attr-idtype');
-    load_formeditchasis(idchasis, idclass, idmodel, idproduk, idtype);
+    // load_formeditchasis(idchasis, idclass, idmodel, idproduk, idtype);
+
+    $('#chasisModallLabel').text('Form edit chasis');
+    $('#btnupdatechasis').removeClass('d-none');
+    $('#btnsavechasis').addClass('d-none');
+    $('#old_produk').removeClass('d-none');
+    $('#chasisModal').modal('show');
+
+    $.ajax({
+        url:"index.php?r=masterchasis/detail_chasis",
+        method:"POST",
+        data:{
+            idproduk:idproduk,
+            idclass:idclass,
+            idmodel: idmodel,
+            idtype: idtype,
+            idchasis: idchasis
+        },
+        success:function(data){
+            var data = JSON.parse(data);
+            $('#idchasis').val(data.IDCHASIS);
+            $('#old_produk').text(data.NAMAPRODUK);
+            $('#old_produk').val(data.IDPRODUK);
+            $('#old_class').text(data.NAMACLASS);
+            $('#old_class').val(data.IDCLASS);
+            $('#old_model').text(data.NAMAMODEL);
+            $('#old_model').val(data.IDMODEL);
+            $('#old_type').val(data.IDTYPE);
+            $('#old_type').text(data.NAMATYPE);
+            $('#namachasis').val(data.NAMACHASIS);
+        }
+    });
 });
 
 $(document).on('click', '.updatemasterchasis', function(){
     
-    var idproduk = $('#idproduk').val();
-    var idmodel = $('#idmodel').val();
-    var idtype = $('#idtype').val();
-    var idclass = $('#idclass').val();
+    var idproduk = $('#addproduk').val();
+    var idmodel = $('#addmodel').val();
+    var idtype = $('#addtype').val();
+    var idclass = $('#addclass').val();
     var idchasis = $('#idchasis').val();
     var namachasis = $('#namachasis').val();
-    
-    
+    $('#chasisModal').modal('hide');
     
     if(namachasis == ""){
         Swal.fire({
@@ -1542,6 +1775,7 @@ $(document).on('click', '.updatemasterchasis', function(){
 $(document).on('click', '.updatemasterproduk', function(){
     var idproduk = $('#idproduk').val();
     var namaproduk = $('#namaproduk').val();
+    $('#produkModal').modal('hide');
     
     if(namaproduk == ""){
         Swal.fire({
@@ -1576,6 +1810,7 @@ $(document).on('click', '.updatemasterproduk', function(){
                         confirmButtonText: 'Close'
                     });
                 } else {
+                    $('#produkModal').modal('hide');
                     Swal.fire({
                         title: 'Update Failed!',
                         icon: 'error',
@@ -1594,6 +1829,7 @@ $(document).on('click', '.updatemasterclass', function(){
     var idproduk = $('#idproduk').val();
     var idclass = $('#idclass').val();
     var namaclass = $('#namaclass').val();
+    $('#classModal').modal('hide');
     
     if(namaclass == ""){
         Swal.fire({
@@ -1607,7 +1843,6 @@ $(document).on('click', '.updatemasterclass', function(){
         formData.append('idproduk', idproduk);
         formData.append('idclass', idclass);
         formData.append('namaclass', namaclass);
-        
         $.ajax({
             url:"index.php?r=masterclass/proses_editclass",
             type: 'POST',
@@ -1644,11 +1879,12 @@ $(document).on('click', '.updatemasterclass', function(){
 });
 
 $(document).on('click', '.updatemastermodel', function(){
-    var idproduk = $('#idproduk').val();
-    var idclass = $('#idclass').val();
+    var idproduk = $('#addproduk').val();
+    var idclass = $('#addclass').val();
     var idmodel = $('#idmodel').val();
     var namamodel = $('#namamodel').val();
-    
+    $('#modelModal').modal('hide');
+
     if(namamodel == ""){
         Swal.fire({
             title: 'Warning!',
@@ -1699,12 +1935,13 @@ $(document).on('click', '.updatemastermodel', function(){
 });
 
 $(document).on('click', '.updatemastertype', function(){
-    var idproduk = $('#idproduk').val();
-    var idclass = $('#idclass').val();
-    var idmodel = $('#idmodel').val();
+    var idproduk = $('#addproduk').val();
+    var idclass = $('#addclass').val();
+    var idmodel = $('#addmodel').val();
     var idtype = $('#idtype').val();
     var namatype = $('#namatype').val();
-    
+    $('#typeModal').modal('hide');
+
     if(namatype == ""){
         Swal.fire({
             title: 'Warning!',

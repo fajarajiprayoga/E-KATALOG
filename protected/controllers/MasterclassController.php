@@ -69,6 +69,31 @@ class MasterclassController extends Controller {
             <?php
         }
     }
+
+    public function actionDetail_class() {
+        if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){
+            $idproduk = $_POST['idproduk'];
+            $idclass = $_POST['idclass'];
+            $q_produk = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_PRODUK WHERE ID_PRODUK = '$idproduk'")->queryAll();
+            foreach($q_produk as $rowproduk){
+                $data['IDPRODUK'] = $arr[]=$rowproduk["ID_PRODUK"];
+                $data['NAMAPRODUK'] = $arr[]=$rowproduk["NAMA_PRODUK"];
+            }
+            $q_class = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_CLASS WHERE ID_CLASS = '$idclass'")->queryAll();
+            foreach($q_class as $rowclass){
+                $data['IDCLASS'] = $arr[]=$rowclass["ID_CLASS"];
+                $data['NAMACLASS'] = $arr[]=$rowclass["NAMA_CLASS"];
+            }
+            
+            echo json_encode($data);
+         } else {
+             ?>
+                 <script type="text/javascript">
+                     window.location.href = "index.php?r=site/logout";
+                 </script>
+             <?php
+         }
+    }
     
     public function actionProses_editclass() {
         if($this->Auth_adm() == '1' || $this->Auth_eng() == '1' || $this->Auth_all() == '1'){

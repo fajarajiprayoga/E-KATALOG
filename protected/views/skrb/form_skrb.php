@@ -133,8 +133,6 @@ if($row == 0){} else {
                                 $backgroundcolor = "#D3D3D3";
                             }
                             
-                            
-                            
                             $arr = array();
                             $qdatakatalog = Yii::app()->dbOracle->createCommand("SELECT * FROM KATALOG_SKRB_$dir WHERE ID_SKRB_$dir = '$idskrbsales'")->queryAll();
                             foreach($qdatakatalog as $datakatalog){
